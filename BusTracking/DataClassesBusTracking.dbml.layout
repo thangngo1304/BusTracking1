@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11.25, 14" name="DataClassesBusTracking">
+  <DataContextMoniker Name="/DataClassesBusTrackingDataContext" />
+  <nestedChildShapes>
+    <classShape Id="7d5f7336-6dc2-46ad-992f-98ccb452e2bb" absoluteBounds="3.5, 6.125, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/DataClassesBusTrackingDataContext/BUS" />
+      <nestedChildShapes>
+        <elementListCompartment Id="75c48bf7-41d2-4ddf-8401-84055af36259" absoluteBounds="3.515, 6.585, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a7509bb8-4270-49e6-96d6-99c8c00425d2" absoluteBounds="9, 6, 2, 1.9631982421875005">
+      <DataClassMoniker Name="/DataClassesBusTrackingDataContext/TRIP_HISTORY" />
+      <nestedChildShapes>
+        <elementListCompartment Id="69160d3a-5464-40db-9ebb-f24faa3ef138" absoluteBounds="9.015, 6.46, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="31b79b06-ef47-42de-9a6a-368451f4cda9" absoluteBounds="3.5, 0.75, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/DataClassesBusTrackingDataContext/COORDINATE" />
+      <nestedChildShapes>
+        <elementListCompartment Id="83c1cc11-e399-414b-9743-9a0603172c7e" absoluteBounds="3.515, 1.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="791acbbd-a53b-47b2-ab2c-05179df1434d" absoluteBounds="6.25, 3.875, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/DataClassesBusTrackingDataContext/COORDINATE_ROAD" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2aaad751-9a83-464d-84cf-da6ced0ef00f" absoluteBounds="6.265, 4.335, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f50ae4f2-bbe7-43b0-8f47-7baf64c0d9b1" absoluteBounds="6.25, 8.75, 2, 1.9631982421875005">
+      <DataClassMoniker Name="/DataClassesBusTrackingDataContext/CUSTOMER" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2b7ad6e0-4749-4f5c-b72b-ee91f2c4b0ce" absoluteBounds="6.265, 9.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0823242d-aa6c-4040-9b60-6462d9108eec" absoluteBounds="0.75, 5.25, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/DataClassesBusTrackingDataContext/LINE" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0b9fd924-2450-4811-8b2b-46d65dbddd42" absoluteBounds="0.765, 5.71, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="cd8bfcf7-3067-4b05-a102-4e9288632a4c" absoluteBounds="3.5, 4, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/DataClassesBusTrackingDataContext/ROAD" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2efe1cb8-dec3-499c-a2b4-4de11faf1c5a" absoluteBounds="3.515, 4.46, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0361863a-4070-4911-804f-82bca2727136" absoluteBounds="6.25, 11.75, 2, 1.9631982421874987">
+      <DataClassMoniker Name="/DataClassesBusTrackingDataContext/STAFF" />
+      <nestedChildShapes>
+        <elementListCompartment Id="73936c8a-da2e-43cb-b751-551d6075f3ed" absoluteBounds="6.265, 12.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="de7d634a-e3b5-4471-88db-5fba8237bda3" absoluteBounds="6.25, 6.125, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/DataClassesBusTrackingDataContext/TRIP" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4f931486-0d56-4d69-9a1e-5327432835ae" absoluteBounds="6.265, 6.585, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="32369a4f-0892-44f2-87f8-d5fba093ebee" absoluteBounds="9, 8.75, 2, 1.9631982421875005">
+      <DataClassMoniker Name="/DataClassesBusTrackingDataContext/TICKET" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8e703000-2161-4929-a443-fa860c0185c7" absoluteBounds="9.015, 9.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.5 : 1.63544840494792); (7.25 : 1.63544840494792); (7.25 : 3.875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClassesBusTrackingDataContext/COORDINATE/COORDINATE_COORDINATE_ROAD" />
+      <nodes>
+        <classShapeMoniker Id="31b79b06-ef47-42de-9a6a-368451f4cda9" />
+        <classShapeMoniker Id="791acbbd-a53b-47b2-ab2c-05179df1434d" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.5 : 7.89589680989583); (4.5 : 9.73159912109375); (6.25 : 9.73159912109375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClassesBusTrackingDataContext/BUS/BUS_CUSTOMER" />
+      <nodes>
+        <classShapeMoniker Id="7d5f7336-6dc2-46ad-992f-98ccb452e2bb" />
+        <classShapeMoniker Id="f50ae4f2-bbe7-43b0-8f47-7baf64c0d9b1" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 6.47679768880208); (3.5 : 6.47679768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClassesBusTrackingDataContext/LINE/LINE_BUS" />
+      <nodes>
+        <classShapeMoniker Id="0823242d-aa6c-4040-9b60-6462d9108eec" />
+        <classShapeMoniker Id="7d5f7336-6dc2-46ad-992f-98ccb452e2bb" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 4.69314697265625); (6.25 : 4.69314697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClassesBusTrackingDataContext/ROAD/ROAD_COORDINATE_ROAD" />
+      <nodes>
+        <classShapeMoniker Id="cd8bfcf7-3067-4b05-a102-4e9288632a4c" />
+        <classShapeMoniker Id="791acbbd-a53b-47b2-ab2c-05179df1434d" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.75 : 5.25); (1.75 : 4.6249995); (3.5 : 4.6249995)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClassesBusTrackingDataContext/LINE/LINE_ROAD" />
+      <nodes>
+        <classShapeMoniker Id="0823242d-aa6c-4040-9b60-6462d9108eec" />
+        <classShapeMoniker Id="cd8bfcf7-3067-4b05-a102-4e9288632a4c" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 6.91429768880208); (9 : 6.91429768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClassesBusTrackingDataContext/TRIP/TRIP_TRIP_HISTORY" />
+      <nodes>
+        <classShapeMoniker Id="de7d634a-e3b5-4471-88db-5fba8237bda3" />
+        <classShapeMoniker Id="a7509bb8-4270-49e6-96d6-99c8c00425d2" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 6.91429768880208); (6.25 : 6.91429768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClassesBusTrackingDataContext/BUS/BUS_TRIP" />
+      <nodes>
+        <classShapeMoniker Id="7d5f7336-6dc2-46ad-992f-98ccb452e2bb" />
+        <classShapeMoniker Id="de7d634a-e3b5-4471-88db-5fba8237bda3" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 5.3862939453125); (5.875 : 5.7612939453125); (5.875 : 6.48839684440104); (6.25 : 6.48839684440104)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClassesBusTrackingDataContext/ROAD/ROAD_TRIP" />
+      <nodes>
+        <classShapeMoniker Id="cd8bfcf7-3067-4b05-a102-4e9288632a4c" />
+        <classShapeMoniker Id="de7d634a-e3b5-4471-88db-5fba8237bda3" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 12.7315991210937); (10 : 12.7315991210937); (10 : 10.7131982421875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClassesBusTrackingDataContext/STAFF/STAFF_TICKET" />
+      <nodes>
+        <classShapeMoniker Id="0361863a-4070-4911-804f-82bca2727136" />
+        <classShapeMoniker Id="32369a4f-0892-44f2-87f8-d5fba093ebee" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 9.73159912109375); (9 : 9.73159912109375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClassesBusTrackingDataContext/CUSTOMER/CUSTOMER_TICKET" />
+      <nodes>
+        <classShapeMoniker Id="f50ae4f2-bbe7-43b0-8f47-7baf64c0d9b1" />
+        <classShapeMoniker Id="32369a4f-0892-44f2-87f8-d5fba093ebee" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

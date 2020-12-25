@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="LOCATION_BUS" Class="DataClassesBusTrackingDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=DESKTOP-JMDALVR\SQLEXPRESS;Initial Catalog=LOCATION_BUS;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="LOCATION_BUSConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.BUS" Member="BUS">
+    <Type Name="BUS">
+      <Column Name="ID_BUS" Type="System.String" DbType="NVarChar(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="NUMBERPLACES" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="RANGEOFVEHICLE" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="YEAROFMANUFACTURE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ID_LINE" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Association Name="BUS_CUSTOMER" Member="CUSTOMERs" ThisKey="ID_BUS" OtherKey="ID_BUS" Type="CUSTOMER" />
+      <Association Name="BUS_TRIP" Member="TRIPs" ThisKey="ID_BUS" OtherKey="ID_BUS" Type="TRIP" />
+      <Association Name="LINE_BUS" Member="LINE" ThisKey="ID_LINE" OtherKey="ID_LINE" Type="LINE" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TRIP_HISTORY" Member="TRIP_HISTORies">
+    <Type Name="TRIP_HISTORY">
+      <Column Name="DATE_HISTORY" Type="System.DateTime" DbType="Date NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TIME_VIOLATION" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="VELOCITY_VIOLATION" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="ROAD_VIOLATION" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="AVERAGEVELOCITY" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="DEPARTURE_TIME" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Association Name="TRIP_TRIP_HISTORY" Member="TRIP" ThisKey="DEPARTURE_TIME" OtherKey="DEPARTURE_TIME" Type="TRIP" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.COORDINATE" Member="COORDINATEs">
+    <Type Name="COORDINATE">
+      <Column Name="ID" Type="System.String" DbType="NVarChar(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="LONGITUDE" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="LATITUDE" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="STREET_NAME" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="PROVINCE" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Association Name="COORDINATE_COORDINATE_ROAD" Member="COORDINATE_ROADs" ThisKey="ID" OtherKey="ID" Type="COORDINATE_ROAD" />
+    </Type>
+  </Table>
+  <Table Name="dbo.COORDINATE_ROAD" Member="COORDINATE_ROADs">
+    <Type Name="COORDINATE_ROAD">
+      <Column Name="ID" Type="System.String" DbType="NVarChar(5)" CanBeNull="true" />
+      <Column Name="ID_ROAD" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="INTERVAL" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="LOCATION" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Association Name="COORDINATE_COORDINATE_ROAD" Member="COORDINATE" ThisKey="ID" OtherKey="ID" Type="COORDINATE" IsForeignKey="true" />
+      <Association Name="ROAD_COORDINATE_ROAD" Member="ROAD" ThisKey="ID_ROAD" OtherKey="ID_ROAD" Type="ROAD" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CUSTOMER" Member="CUSTOMERs">
+    <Type Name="CUSTOMER">
+      <Column Name="ID_USER" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="NAME" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="SEX" Type="System.String" DbType="Char(6)" CanBeNull="true" />
+      <Column Name="DATEOFBIRTH" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="JOB" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="ID_BUS" Type="System.String" DbType="NVarChar(5)" CanBeNull="true" />
+      <Association Name="CUSTOMER_TICKET" Member="TICKETs" ThisKey="ID_USER" OtherKey="ID_USER" Type="TICKET" />
+      <Association Name="BUS_CUSTOMER" Member="BUS" ThisKey="ID_BUS" OtherKey="ID_BUS" Type="BUS" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LINE" Member="LINEs">
+    <Type Name="LINE">
+      <Column Name="ID_LINE" Type="System.String" DbType="NVarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="LINE_NAME" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="HEADWAY" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="ADMINISTRATIVE" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Association Name="LINE_BUS" Member="BUS" ThisKey="ID_LINE" OtherKey="ID_LINE" Type="BUS" />
+      <Association Name="LINE_ROAD" Member="ROADs" ThisKey="ID_LINE" OtherKey="ID_LINE" Type="ROAD" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ROAD" Member="ROADs">
+    <Type Name="ROAD">
+      <Column Name="ID_ROAD" Type="System.String" DbType="NVarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="AVERAGEVELOCITY" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="ID_LINE" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Association Name="ROAD_COORDINATE_ROAD" Member="COORDINATE_ROADs" ThisKey="ID_ROAD" OtherKey="ID_ROAD" Type="COORDINATE_ROAD" />
+      <Association Name="ROAD_TRIP" Member="TRIPs" ThisKey="ID_ROAD" OtherKey="ID_ROAD" Type="TRIP" />
+      <Association Name="LINE_ROAD" Member="LINE" ThisKey="ID_LINE" OtherKey="ID_LINE" Type="LINE" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.STAFF" Member="STAFFs">
+    <Type Name="STAFF">
+      <Column Name="ID_STAFF" Type="System.String" DbType="NVarChar(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="NAME" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="DATEOFBIRTH" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="SEX" Type="System.String" DbType="Char(7)" CanBeNull="true" />
+      <Column Name="POSITION" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="ADDRES" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Association Name="STAFF_TICKET" Member="TICKETs" ThisKey="ID_STAFF" OtherKey="ID_STAFF" Type="TICKET" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TRIP" Member="TRIPs">
+    <Type Name="TRIP">
+      <Column Name="DEPARTURE_TIME" Type="System.String" DbType="NVarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DESTINATION_TIME" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="ID_ROAD" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="ID_BUS" Type="System.String" DbType="NVarChar(5)" CanBeNull="true" />
+      <Association Name="TRIP_TRIP_HISTORY" Member="TRIP_HISTORies" ThisKey="DEPARTURE_TIME" OtherKey="DEPARTURE_TIME" Type="TRIP_HISTORY" />
+      <Association Name="BUS_TRIP" Member="BUS" ThisKey="ID_BUS" OtherKey="ID_BUS" Type="BUS" IsForeignKey="true" />
+      <Association Name="ROAD_TRIP" Member="ROAD" ThisKey="ID_ROAD" OtherKey="ID_ROAD" Type="ROAD" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TICKET" Member="TICKETs">
+    <Type Name="TICKET">
+      <Column Name="ID_TICKET" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TICKETTYPE" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="FARE" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="DEPARTURE_DAY" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ID_USER" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ID_STAFF" Type="System.String" DbType="NVarChar(5)" CanBeNull="true" />
+      <Association Name="STAFF_TICKET" Member="STAFF" ThisKey="ID_STAFF" OtherKey="ID_STAFF" Type="STAFF" IsForeignKey="true" />
+      <Association Name="CUSTOMER_TICKET" Member="CUSTOMER" ThisKey="ID_USER" OtherKey="ID_USER" Type="CUSTOMER" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
